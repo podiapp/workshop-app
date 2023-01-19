@@ -73,11 +73,9 @@ class _QuestionsPageState extends State<QuestionsPage> {
         }
 
         return InkWell(
-          onTap: store.sentChoice
-              ? null
-              : () {
-                  store.changeChoice(char);
-                },
+          onTap: () {
+            store.changeChoice(char);
+          },
           child: Container(
             height: 64,
             width: double.infinity,
